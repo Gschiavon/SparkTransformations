@@ -28,7 +28,7 @@ object StreamProcessor {
 
     val sparkContext = new SparkContext(sparkConf)
     val sqlContext = new SQLContext(sparkContext)
-    val ssc = new StreamingContext(sparkContext, Seconds(10))
+    val ssc = new StreamingContext(sparkContext, Seconds(2))
 
     val kafkaParams = Map(
     "metadata.broker.list" -> conf.getString("kafka.metadata.broker.list"),
