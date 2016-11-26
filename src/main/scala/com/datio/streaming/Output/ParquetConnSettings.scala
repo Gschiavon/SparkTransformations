@@ -16,8 +16,8 @@ case class ParquetConnSettings(SQLContext: SQLContext) {
   def save(rdd: RDD[Row])(implicit conf: Config): Unit = {
     val hdfsPath = conf.getString("hdfs.path")
     val df = SQLContext.createDataFrame(rdd, parquetSchema)
-//    df.show
-//    df.printSchema()
+    df.show
+    df.printSchema()
     df.write.mode(Append).parquet(hdfsPath)
   }
 }

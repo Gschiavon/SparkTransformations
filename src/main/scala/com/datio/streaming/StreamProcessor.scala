@@ -18,7 +18,7 @@ object StreamProcessor {
     implicit val conf = ConfigFactory.load
 
     val sparkConf = new SparkConf()
-      .setMaster(conf.getString("spark.master"))
+//      .setMaster(conf.getString("spark.master"))
       .setAppName(conf.getString("spark.appName"))
 
     sparkConf.set("spark.streaming.backpressure.enabled", "true")

@@ -13,7 +13,7 @@
     <properties>
         <spark.version>1.6.2</spark.version>
         <kafka.version>0.10.0.0</kafka.version>
-        <scala.version>2.11</scala.version>
+        <scala.version>2.10</scala.version>
     </properties>
     <dependencies>
         <dependency>
